@@ -25,7 +25,7 @@ import enum
 load_dotenv()
 
 # ── Database ──────────────────────────────────────────────
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./maria.db")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:ipQmoMpEjUgYIMMCUpysKPQpMxfkYPlN@postgres.railway.internal:5432/railway")
 # Render gives postgres:// but SQLAlchemy needs postgresql://
 if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
